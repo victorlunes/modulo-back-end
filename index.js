@@ -24,6 +24,10 @@ app.get("/Blog", function (req, res){
     res.send("Bem-vindo ao meu blog!!")
 })
 
+app.get("/ola/:nome/:cargo/:cor", function(req, res){
+    res.send("ola" + " " + req.params.nome + "Seu cargo é: " + req.params.cargo + "Sua cor favorita é: " + req.params.cor)
+})
+
 app.listen(8081, function(){
     console.log("servidos esta rodando na url http://localhost:8081")
 })//app.listen sempre tem que ficar no final do codigo,a função pede um unico parametro obrigatorio
